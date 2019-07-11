@@ -14,78 +14,15 @@ import org.reimagineehr.model.quick.api.choice.SuspectEntityChoice;
 /**
  * Author: Claude Nanjo
  * GENERATED CODE - DO NOT EDIT
- * Generated or updated on: Tue Jul 09 15:15:42 PDT 2019
- * Copyright: Claude Nanjo
+ * Generated or updated on: Thu Jul 11 00:39:54 PDT 2019
+ * Copyright: University of Utah
  * License: Apache 2
 */
 public class SuspectEntityChoiceImpl extends N7Choice<Immunization,Procedure,Medication,MedicationAdministration,MedicationStatement,Device,Substance> implements SuspectEntityChoice {
 
-	private Immunization immunization;
-	private Procedure procedure;
-	private Medication medication;
-	private MedicationAdministration medicationAdministration;
-	private MedicationStatement medicationStatement;
-	private Device device;
-	private Substance substance;
 
 	public SuspectEntityChoiceImpl(Object choice) {
-	super(choice);
-	}
-
-	public Immunization getImmunization() {
-		return this.immunization;
-	}
-
-	public void setImmunization(Immunization arg) {
-		this.immunization=arg;
-	}
-
-	public Procedure getProcedure() {
-		return this.procedure;
-	}
-
-	public void setProcedure(Procedure arg) {
-		this.procedure=arg;
-	}
-
-	public Medication getMedication() {
-		return this.medication;
-	}
-
-	public void setMedication(Medication arg) {
-		this.medication=arg;
-	}
-
-	public MedicationAdministration getMedicationAdministration() {
-		return this.medicationAdministration;
-	}
-
-	public void setMedicationAdministration(MedicationAdministration arg) {
-		this.medicationAdministration=arg;
-	}
-
-	public MedicationStatement getMedicationStatement() {
-		return this.medicationStatement;
-	}
-
-	public void setMedicationStatement(MedicationStatement arg) {
-		this.medicationStatement=arg;
-	}
-
-	public Device getDevice() {
-		return this.device;
-	}
-
-	public void setDevice(Device arg) {
-		this.device=arg;
-	}
-
-	public Substance getSubstance() {
-		return this.substance;
-	}
-
-	public void setSubstance(Substance arg) {
-		this.substance=arg;
+		super(choice);
 	}
 
 	public N7Choice<Immunization,Procedure,Medication,MedicationAdministration,MedicationStatement,Device,Substance> buildChoice(Object choice) {
@@ -97,6 +34,90 @@ public class SuspectEntityChoiceImpl extends N7Choice<Immunization,Procedure,Med
 		} else {
 			throw new RuntimeException("Invalid type for choice argument " + choice.getClass().getName());
 		}
+	}
+
+	public Immunization getImmunization() {
+		if(getChoice() instanceof Immunization) {
+			return (Immunization) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setImmunization(Immunization immunizationArg) {
+		setChoice(immunizationArg);
+	}
+
+	public Procedure getProcedure() {
+		if(getChoice() instanceof Procedure) {
+			return (Procedure) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setProcedure(Procedure procedureArg) {
+		setChoice(procedureArg);
+	}
+
+	public Medication getMedication() {
+		if(getChoice() instanceof Medication) {
+			return (Medication) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setMedication(Medication medicationArg) {
+		setChoice(medicationArg);
+	}
+
+	public MedicationAdministration getMedicationAdministration() {
+		if(getChoice() instanceof MedicationAdministration) {
+			return (MedicationAdministration) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setMedicationAdministration(MedicationAdministration medicationAdministrationArg) {
+		setChoice(medicationAdministrationArg);
+	}
+
+	public MedicationStatement getMedicationStatement() {
+		if(getChoice() instanceof MedicationStatement) {
+			return (MedicationStatement) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setMedicationStatement(MedicationStatement medicationStatementArg) {
+		setChoice(medicationStatementArg);
+	}
+
+	public Device getDevice() {
+		if(getChoice() instanceof Device) {
+			return (Device) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setDevice(Device deviceArg) {
+		setChoice(deviceArg);
+	}
+
+	public Substance getSubstance() {
+		if(getChoice() instanceof Substance) {
+			return (Substance) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setSubstance(Substance substanceArg) {
+		setChoice(substanceArg);
 	}
 
 }

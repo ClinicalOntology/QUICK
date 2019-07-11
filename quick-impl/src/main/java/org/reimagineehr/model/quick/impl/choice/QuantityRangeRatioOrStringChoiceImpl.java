@@ -11,51 +11,15 @@ import org.reimagineehr.model.quick.api.choice.QuantityRangeRatioOrStringChoice;
 /**
  * Author: Claude Nanjo
  * GENERATED CODE - DO NOT EDIT
- * Generated or updated on: Tue Jul 09 15:15:42 PDT 2019
- * Copyright: Claude Nanjo
+ * Generated or updated on: Thu Jul 11 00:39:54 PDT 2019
+ * Copyright: University of Utah
  * License: Apache 2
 */
 public class QuantityRangeRatioOrStringChoiceImpl extends N4Choice<SimpleQuantity,Range,Ratio,String> implements QuantityRangeRatioOrStringChoice {
 
-	private SimpleQuantity simpleQuantity;
-	private Range range;
-	private Ratio ratio;
-	private String string;
 
 	public QuantityRangeRatioOrStringChoiceImpl(Object choice) {
-	super(choice);
-	}
-
-	public SimpleQuantity getSimpleQuantity() {
-		return this.simpleQuantity;
-	}
-
-	public void setSimpleQuantity(SimpleQuantity arg) {
-		this.simpleQuantity=arg;
-	}
-
-	public Range getRange() {
-		return this.range;
-	}
-
-	public void setRange(Range arg) {
-		this.range=arg;
-	}
-
-	public Ratio getRatio() {
-		return this.ratio;
-	}
-
-	public void setRatio(Ratio arg) {
-		this.ratio=arg;
-	}
-
-	public String getString() {
-		return this.string;
-	}
-
-	public void setString(String arg) {
-		this.string=arg;
+		super(choice);
 	}
 
 	public N4Choice<SimpleQuantity,Range,Ratio,String> buildChoice(Object choice) {
@@ -67,6 +31,54 @@ public class QuantityRangeRatioOrStringChoiceImpl extends N4Choice<SimpleQuantit
 		} else {
 			throw new RuntimeException("Invalid type for choice argument " + choice.getClass().getName());
 		}
+	}
+
+	public SimpleQuantity getSimpleQuantity() {
+		if(getChoice() instanceof SimpleQuantity) {
+			return (SimpleQuantity) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setSimpleQuantity(SimpleQuantity simpleQuantityArg) {
+		setChoice(simpleQuantityArg);
+	}
+
+	public Range getRange() {
+		if(getChoice() instanceof Range) {
+			return (Range) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setRange(Range rangeArg) {
+		setChoice(rangeArg);
+	}
+
+	public Ratio getRatio() {
+		if(getChoice() instanceof Ratio) {
+			return (Ratio) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setRatio(Ratio ratioArg) {
+		setChoice(ratioArg);
+	}
+
+	public String getString() {
+		if(getChoice() instanceof String) {
+			return (String) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setString(String stringArg) {
+		setChoice(stringArg);
 	}
 
 }

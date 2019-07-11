@@ -13,78 +13,15 @@ import org.reimagineehr.model.quick.api.choice.OccurrenceAllChoice;
 /**
  * Author: Claude Nanjo
  * GENERATED CODE - DO NOT EDIT
- * Generated or updated on: Tue Jul 09 15:15:41 PDT 2019
- * Copyright: Claude Nanjo
+ * Generated or updated on: Thu Jul 11 00:39:54 PDT 2019
+ * Copyright: University of Utah
  * License: Apache 2
 */
 public class OccurrenceAllChoiceImpl extends N7Choice<Date,Period,Timing,Date,String,Age,Range> implements OccurrenceAllChoice {
 
-	private Date dateTime;
-	private Period period;
-	private Timing timing;
-	private Date instant;
-	private String string;
-	private Age age;
-	private Range range;
 
 	public OccurrenceAllChoiceImpl(Object choice) {
-	super(choice);
-	}
-
-	public Date getDateTime() {
-		return this.dateTime;
-	}
-
-	public void setDateTime(Date arg) {
-		this.dateTime=arg;
-	}
-
-	public Period getPeriod() {
-		return this.period;
-	}
-
-	public void setPeriod(Period arg) {
-		this.period=arg;
-	}
-
-	public Timing getTiming() {
-		return this.timing;
-	}
-
-	public void setTiming(Timing arg) {
-		this.timing=arg;
-	}
-
-	public Date getInstant() {
-		return this.instant;
-	}
-
-	public void setInstant(Date arg) {
-		this.instant=arg;
-	}
-
-	public String getString() {
-		return this.string;
-	}
-
-	public void setString(String arg) {
-		this.string=arg;
-	}
-
-	public Age getAge() {
-		return this.age;
-	}
-
-	public void setAge(Age arg) {
-		this.age=arg;
-	}
-
-	public Range getRange() {
-		return this.range;
-	}
-
-	public void setRange(Range arg) {
-		this.range=arg;
+		super(choice);
 	}
 
 	public N7Choice<Date,Period,Timing,Date,String,Age,Range> buildChoice(Object choice) {
@@ -96,6 +33,90 @@ public class OccurrenceAllChoiceImpl extends N7Choice<Date,Period,Timing,Date,St
 		} else {
 			throw new RuntimeException("Invalid type for choice argument " + choice.getClass().getName());
 		}
+	}
+
+	public Date getDateTime() {
+		if(getChoice() instanceof Date) {
+			return (Date) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setDateTime(Date dateTimeArg) {
+		setChoice(dateTimeArg);
+	}
+
+	public Period getPeriod() {
+		if(getChoice() instanceof Period) {
+			return (Period) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setPeriod(Period periodArg) {
+		setChoice(periodArg);
+	}
+
+	public Timing getTiming() {
+		if(getChoice() instanceof Timing) {
+			return (Timing) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setTiming(Timing timingArg) {
+		setChoice(timingArg);
+	}
+
+	public Date getInstant() {
+		if(getChoice() instanceof Date) {
+			return (Date) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setInstant(Date instantArg) {
+		setChoice(instantArg);
+	}
+
+	public String getString() {
+		if(getChoice() instanceof String) {
+			return (String) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setString(String stringArg) {
+		setChoice(stringArg);
+	}
+
+	public Age getAge() {
+		if(getChoice() instanceof Age) {
+			return (Age) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setAge(Age ageArg) {
+		setChoice(ageArg);
+	}
+
+	public Range getRange() {
+		if(getChoice() instanceof Range) {
+			return (Range) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setRange(Range rangeArg) {
+		setChoice(rangeArg);
 	}
 
 }

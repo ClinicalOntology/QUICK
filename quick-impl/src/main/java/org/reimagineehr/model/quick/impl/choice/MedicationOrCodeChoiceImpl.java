@@ -9,33 +9,15 @@ import org.reimagineehr.model.quick.api.choice.MedicationOrCodeChoice;
 /**
  * Author: Claude Nanjo
  * GENERATED CODE - DO NOT EDIT
- * Generated or updated on: Tue Jul 09 15:15:42 PDT 2019
- * Copyright: Claude Nanjo
+ * Generated or updated on: Thu Jul 11 00:39:54 PDT 2019
+ * Copyright: University of Utah
  * License: Apache 2
 */
 public class MedicationOrCodeChoiceImpl extends N2Choice<Medication,CodeableConcept> implements MedicationOrCodeChoice {
 
-	private Medication medication;
-	private CodeableConcept code;
 
 	public MedicationOrCodeChoiceImpl(Object choice) {
-	super(choice);
-	}
-
-	public Medication getMedication() {
-		return this.medication;
-	}
-
-	public void setMedication(Medication arg) {
-		this.medication=arg;
-	}
-
-	public CodeableConcept getCode() {
-		return this.code;
-	}
-
-	public void setCode(CodeableConcept arg) {
-		this.code=arg;
+		super(choice);
 	}
 
 	public N2Choice<Medication,CodeableConcept> buildChoice(Object choice) {
@@ -47,6 +29,30 @@ public class MedicationOrCodeChoiceImpl extends N2Choice<Medication,CodeableConc
 		} else {
 			throw new RuntimeException("Invalid type for choice argument " + choice.getClass().getName());
 		}
+	}
+
+	public Medication getMedication() {
+		if(getChoice() instanceof Medication) {
+			return (Medication) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setMedication(Medication medicationArg) {
+		setChoice(medicationArg);
+	}
+
+	public CodeableConcept getCode() {
+		if(getChoice() instanceof CodeableConcept) {
+			return (CodeableConcept) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setCode(CodeableConcept codeArg) {
+		setChoice(codeArg);
 	}
 
 }

@@ -9,33 +9,15 @@ import org.reimagineehr.model.quick.api.choice.BooleanDateTimeChoice;
 /**
  * Author: Claude Nanjo
  * GENERATED CODE - DO NOT EDIT
- * Generated or updated on: Tue Jul 09 15:15:42 PDT 2019
- * Copyright: Claude Nanjo
+ * Generated or updated on: Thu Jul 11 00:39:54 PDT 2019
+ * Copyright: University of Utah
  * License: Apache 2
 */
 public class BooleanDateTimeChoiceImpl extends N2Choice<Boolean,Date> implements BooleanDateTimeChoice {
 
-	private Boolean booleanValue;
-	private Date dateTime;
 
 	public BooleanDateTimeChoiceImpl(Object choice) {
-	super(choice);
-	}
-
-	public Boolean getBoolean() {
-		return this.booleanValue;
-	}
-
-	public void setBoolean(Boolean arg) {
-		this.booleanValue=arg;
-	}
-
-	public Date getDateTime() {
-		return this.dateTime;
-	}
-
-	public void setDateTime(Date arg) {
-		this.dateTime=arg;
+		super(choice);
 	}
 
 	public N2Choice<Boolean,Date> buildChoice(Object choice) {
@@ -47,6 +29,30 @@ public class BooleanDateTimeChoiceImpl extends N2Choice<Boolean,Date> implements
 		} else {
 			throw new RuntimeException("Invalid type for choice argument " + choice.getClass().getName());
 		}
+	}
+
+	public Boolean getBoolean() {
+		if(getChoice() instanceof Boolean) {
+			return (Boolean) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setBoolean(Boolean booleanArg) {
+		setChoice(booleanArg);
+	}
+
+	public Date getDateTime() {
+		if(getChoice() instanceof Date) {
+			return (Date) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setDateTime(Date dateTimeArg) {
+		setChoice(dateTimeArg);
 	}
 
 }

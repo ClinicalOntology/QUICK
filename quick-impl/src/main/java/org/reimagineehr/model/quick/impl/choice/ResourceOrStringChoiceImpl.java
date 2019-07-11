@@ -9,33 +9,15 @@ import org.reimagineehr.model.quick.api.choice.ResourceOrStringChoice;
 /**
  * Author: Claude Nanjo
  * GENERATED CODE - DO NOT EDIT
- * Generated or updated on: Tue Jul 09 15:15:42 PDT 2019
- * Copyright: Claude Nanjo
+ * Generated or updated on: Thu Jul 11 00:39:54 PDT 2019
+ * Copyright: University of Utah
  * License: Apache 2
 */
 public class ResourceOrStringChoiceImpl extends N2Choice<DomainResource,String> implements ResourceOrStringChoice {
 
-	private DomainResource resource;
-	private String string;
 
 	public ResourceOrStringChoiceImpl(Object choice) {
-	super(choice);
-	}
-
-	public DomainResource getResource() {
-		return this.resource;
-	}
-
-	public void setResource(DomainResource arg) {
-		this.resource=arg;
-	}
-
-	public String getString() {
-		return this.string;
-	}
-
-	public void setString(String arg) {
-		this.string=arg;
+		super(choice);
 	}
 
 	public N2Choice<DomainResource,String> buildChoice(Object choice) {
@@ -47,6 +29,30 @@ public class ResourceOrStringChoiceImpl extends N2Choice<DomainResource,String> 
 		} else {
 			throw new RuntimeException("Invalid type for choice argument " + choice.getClass().getName());
 		}
+	}
+
+	public DomainResource getResource() {
+		if(getChoice() instanceof DomainResource) {
+			return (DomainResource) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setResource(DomainResource resourceArg) {
+		setChoice(resourceArg);
+	}
+
+	public String getString() {
+		if(getChoice() instanceof String) {
+			return (String) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setString(String stringArg) {
+		setChoice(stringArg);
 	}
 
 }

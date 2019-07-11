@@ -9,33 +9,15 @@ import org.reimagineehr.model.quick.api.choice.ResourceOrCodeChoice;
 /**
  * Author: Claude Nanjo
  * GENERATED CODE - DO NOT EDIT
- * Generated or updated on: Tue Jul 09 15:15:42 PDT 2019
- * Copyright: Claude Nanjo
+ * Generated or updated on: Thu Jul 11 00:39:54 PDT 2019
+ * Copyright: University of Utah
  * License: Apache 2
 */
 public class ResourceOrCodeChoiceImpl extends N2Choice<DomainResource,CodeableConcept> implements ResourceOrCodeChoice {
 
-	private DomainResource resource;
-	private CodeableConcept code;
 
 	public ResourceOrCodeChoiceImpl(Object choice) {
-	super(choice);
-	}
-
-	public DomainResource getResource() {
-		return this.resource;
-	}
-
-	public void setResource(DomainResource arg) {
-		this.resource=arg;
-	}
-
-	public CodeableConcept getCode() {
-		return this.code;
-	}
-
-	public void setCode(CodeableConcept arg) {
-		this.code=arg;
+		super(choice);
 	}
 
 	public N2Choice<DomainResource,CodeableConcept> buildChoice(Object choice) {
@@ -47,6 +29,30 @@ public class ResourceOrCodeChoiceImpl extends N2Choice<DomainResource,CodeableCo
 		} else {
 			throw new RuntimeException("Invalid type for choice argument " + choice.getClass().getName());
 		}
+	}
+
+	public DomainResource getResource() {
+		if(getChoice() instanceof DomainResource) {
+			return (DomainResource) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setResource(DomainResource resourceArg) {
+		setChoice(resourceArg);
+	}
+
+	public CodeableConcept getCode() {
+		if(getChoice() instanceof CodeableConcept) {
+			return (CodeableConcept) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setCode(CodeableConcept codeArg) {
+		setChoice(codeArg);
 	}
 
 }

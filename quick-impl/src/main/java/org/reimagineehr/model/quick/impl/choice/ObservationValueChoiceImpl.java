@@ -17,105 +17,15 @@ import org.reimagineehr.model.quick.api.choice.ObservationValueChoice;
 /**
  * Author: Claude Nanjo
  * GENERATED CODE - DO NOT EDIT
- * Generated or updated on: Tue Jul 09 15:15:42 PDT 2019
- * Copyright: Claude Nanjo
+ * Generated or updated on: Thu Jul 11 00:39:54 PDT 2019
+ * Copyright: University of Utah
  * License: Apache 2
 */
 public class ObservationValueChoiceImpl extends N10Choice<Quantity,CodeableConcept,String,Boolean,Integer,Range,Ratio,LocalTime,Date,Period> implements ObservationValueChoice {
 
-	private Quantity quantity;
-	private CodeableConcept codeableConcept;
-	private String string;
-	private Boolean booleanValue;
-	private Integer integer;
-	private Range range;
-	private Ratio ratio;
-	private LocalTime time;
-	private Date dateTime;
-	private Period period;
 
 	public ObservationValueChoiceImpl(Object choice) {
-	super(choice);
-	}
-
-	public Quantity getQuantity() {
-		return this.quantity;
-	}
-
-	public void setQuantity(Quantity arg) {
-		this.quantity=arg;
-	}
-
-	public CodeableConcept getCodeableConcept() {
-		return this.codeableConcept;
-	}
-
-	public void setCodeableConcept(CodeableConcept arg) {
-		this.codeableConcept=arg;
-	}
-
-	public String getString() {
-		return this.string;
-	}
-
-	public void setString(String arg) {
-		this.string=arg;
-	}
-
-	public Boolean getBoolean() {
-		return this.booleanValue;
-	}
-
-	public void setBoolean(Boolean arg) {
-		this.booleanValue=arg;
-	}
-
-	public Integer getInteger() {
-		return this.integer;
-	}
-
-	public void setInteger(Integer arg) {
-		this.integer=arg;
-	}
-
-	public Range getRange() {
-		return this.range;
-	}
-
-	public void setRange(Range arg) {
-		this.range=arg;
-	}
-
-	public Ratio getRatio() {
-		return this.ratio;
-	}
-
-	public void setRatio(Ratio arg) {
-		this.ratio=arg;
-	}
-
-	public LocalTime getTime() {
-		return this.time;
-	}
-
-	public void setTime(LocalTime arg) {
-		this.time=arg;
-	}
-
-	public Date getDateTime() {
-		return this.dateTime;
-	}
-
-	public void setDateTime(Date arg) {
-		this.dateTime=arg;
-	}
-
-	public Period getPeriod() {
-		return this.period;
-	}
-
-	public void setPeriod(Period arg) {
-		this.period=arg;
+		super(choice);
 	}
 
 	public N10Choice<Quantity,CodeableConcept,String,Boolean,Integer,Range,Ratio,LocalTime,Date,Period> buildChoice(Object choice) {
@@ -127,6 +37,126 @@ public class ObservationValueChoiceImpl extends N10Choice<Quantity,CodeableConce
 		} else {
 			throw new RuntimeException("Invalid type for choice argument " + choice.getClass().getName());
 		}
+	}
+
+	public Quantity getQuantity() {
+		if(getChoice() instanceof Quantity) {
+			return (Quantity) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setQuantity(Quantity quantityArg) {
+		setChoice(quantityArg);
+	}
+
+	public CodeableConcept getCodeableConcept() {
+		if(getChoice() instanceof CodeableConcept) {
+			return (CodeableConcept) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setCodeableConcept(CodeableConcept codeableConceptArg) {
+		setChoice(codeableConceptArg);
+	}
+
+	public String getString() {
+		if(getChoice() instanceof String) {
+			return (String) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setString(String stringArg) {
+		setChoice(stringArg);
+	}
+
+	public Boolean getBoolean() {
+		if(getChoice() instanceof Boolean) {
+			return (Boolean) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setBoolean(Boolean booleanArg) {
+		setChoice(booleanArg);
+	}
+
+	public Integer getInteger() {
+		if(getChoice() instanceof Integer) {
+			return (Integer) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setInteger(Integer integerArg) {
+		setChoice(integerArg);
+	}
+
+	public Range getRange() {
+		if(getChoice() instanceof Range) {
+			return (Range) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setRange(Range rangeArg) {
+		setChoice(rangeArg);
+	}
+
+	public Ratio getRatio() {
+		if(getChoice() instanceof Ratio) {
+			return (Ratio) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setRatio(Ratio ratioArg) {
+		setChoice(ratioArg);
+	}
+
+	public LocalTime getTime() {
+		if(getChoice() instanceof LocalTime) {
+			return (LocalTime) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setTime(LocalTime timeArg) {
+		setChoice(timeArg);
+	}
+
+	public Date getDateTime() {
+		if(getChoice() instanceof Date) {
+			return (Date) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setDateTime(Date dateTimeArg) {
+		setChoice(dateTimeArg);
+	}
+
+	public Period getPeriod() {
+		if(getChoice() instanceof Period) {
+			return (Period) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setPeriod(Period periodArg) {
+		setChoice(periodArg);
 	}
 
 }

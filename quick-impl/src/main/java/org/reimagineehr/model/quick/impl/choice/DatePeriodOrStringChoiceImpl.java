@@ -10,42 +10,15 @@ import org.reimagineehr.model.quick.api.choice.DatePeriodOrStringChoice;
 /**
  * Author: Claude Nanjo
  * GENERATED CODE - DO NOT EDIT
- * Generated or updated on: Tue Jul 09 15:15:42 PDT 2019
- * Copyright: Claude Nanjo
+ * Generated or updated on: Thu Jul 11 00:39:54 PDT 2019
+ * Copyright: University of Utah
  * License: Apache 2
 */
 public class DatePeriodOrStringChoiceImpl extends N3Choice<Date,Period,String> implements DatePeriodOrStringChoice {
 
-	private Date date;
-	private Period period;
-	private String string;
 
 	public DatePeriodOrStringChoiceImpl(Object choice) {
-	super(choice);
-	}
-
-	public Date getDate() {
-		return this.date;
-	}
-
-	public void setDate(Date arg) {
-		this.date=arg;
-	}
-
-	public Period getPeriod() {
-		return this.period;
-	}
-
-	public void setPeriod(Period arg) {
-		this.period=arg;
-	}
-
-	public String getString() {
-		return this.string;
-	}
-
-	public void setString(String arg) {
-		this.string=arg;
+		super(choice);
 	}
 
 	public N3Choice<Date,Period,String> buildChoice(Object choice) {
@@ -57,6 +30,42 @@ public class DatePeriodOrStringChoiceImpl extends N3Choice<Date,Period,String> i
 		} else {
 			throw new RuntimeException("Invalid type for choice argument " + choice.getClass().getName());
 		}
+	}
+
+	public Date getDate() {
+		if(getChoice() instanceof Date) {
+			return (Date) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setDate(Date dateArg) {
+		setChoice(dateArg);
+	}
+
+	public Period getPeriod() {
+		if(getChoice() instanceof Period) {
+			return (Period) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setPeriod(Period periodArg) {
+		setChoice(periodArg);
+	}
+
+	public String getString() {
+		if(getChoice() instanceof String) {
+			return (String) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setString(String stringArg) {
+		setChoice(stringArg);
 	}
 
 }

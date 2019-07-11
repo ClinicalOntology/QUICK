@@ -9,33 +9,15 @@ import org.reimagineehr.model.quick.api.choice.BooleanOrIntegerChoice;
 /**
  * Author: Claude Nanjo
  * GENERATED CODE - DO NOT EDIT
- * Generated or updated on: Tue Jul 09 15:15:42 PDT 2019
- * Copyright: Claude Nanjo
+ * Generated or updated on: Thu Jul 11 00:39:54 PDT 2019
+ * Copyright: University of Utah
  * License: Apache 2
 */
 public class BooleanOrIntegerChoiceImpl extends N2Choice<Boolean,Integer> implements BooleanOrIntegerChoice {
 
-	private Boolean booleanValue;
-	private Integer integer;
 
 	public BooleanOrIntegerChoiceImpl(Object choice) {
-	super(choice);
-	}
-
-	public Boolean getBoolean() {
-		return this.booleanValue;
-	}
-
-	public void setBoolean(Boolean arg) {
-		this.booleanValue=arg;
-	}
-
-	public Integer getInteger() {
-		return this.integer;
-	}
-
-	public void setInteger(Integer arg) {
-		this.integer=arg;
+		super(choice);
 	}
 
 	public N2Choice<Boolean,Integer> buildChoice(Object choice) {
@@ -47,6 +29,30 @@ public class BooleanOrIntegerChoiceImpl extends N2Choice<Boolean,Integer> implem
 		} else {
 			throw new RuntimeException("Invalid type for choice argument " + choice.getClass().getName());
 		}
+	}
+
+	public Boolean getBoolean() {
+		if(getChoice() instanceof Boolean) {
+			return (Boolean) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setBoolean(Boolean booleanArg) {
+		setChoice(booleanArg);
+	}
+
+	public Integer getInteger() {
+		if(getChoice() instanceof Integer) {
+			return (Integer) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setInteger(Integer integerArg) {
+		setChoice(integerArg);
 	}
 
 }

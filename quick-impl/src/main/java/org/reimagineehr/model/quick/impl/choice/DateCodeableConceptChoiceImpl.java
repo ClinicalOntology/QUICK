@@ -9,33 +9,15 @@ import org.reimagineehr.model.quick.api.choice.DateCodeableConceptChoice;
 /**
  * Author: Claude Nanjo
  * GENERATED CODE - DO NOT EDIT
- * Generated or updated on: Tue Jul 09 15:15:42 PDT 2019
- * Copyright: Claude Nanjo
+ * Generated or updated on: Thu Jul 11 00:39:54 PDT 2019
+ * Copyright: University of Utah
  * License: Apache 2
 */
 public class DateCodeableConceptChoiceImpl extends N2Choice<Date,CodeableConcept> implements DateCodeableConceptChoice {
 
-	private Date date;
-	private CodeableConcept codeableConcept;
 
 	public DateCodeableConceptChoiceImpl(Object choice) {
-	super(choice);
-	}
-
-	public Date getDate() {
-		return this.date;
-	}
-
-	public void setDate(Date arg) {
-		this.date=arg;
-	}
-
-	public CodeableConcept getCodeableConcept() {
-		return this.codeableConcept;
-	}
-
-	public void setCodeableConcept(CodeableConcept arg) {
-		this.codeableConcept=arg;
+		super(choice);
 	}
 
 	public N2Choice<Date,CodeableConcept> buildChoice(Object choice) {
@@ -47,6 +29,30 @@ public class DateCodeableConceptChoiceImpl extends N2Choice<Date,CodeableConcept
 		} else {
 			throw new RuntimeException("Invalid type for choice argument " + choice.getClass().getName());
 		}
+	}
+
+	public Date getDate() {
+		if(getChoice() instanceof Date) {
+			return (Date) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setDate(Date dateArg) {
+		setChoice(dateArg);
+	}
+
+	public CodeableConcept getCodeableConcept() {
+		if(getChoice() instanceof CodeableConcept) {
+			return (CodeableConcept) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setCodeableConcept(CodeableConcept codeableConceptArg) {
+		setChoice(codeableConceptArg);
 	}
 
 }

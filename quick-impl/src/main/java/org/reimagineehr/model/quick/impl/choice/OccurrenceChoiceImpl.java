@@ -10,51 +10,15 @@ import org.reimagineehr.model.quick.api.choice.OccurrenceChoice;
 /**
  * Author: Claude Nanjo
  * GENERATED CODE - DO NOT EDIT
- * Generated or updated on: Tue Jul 09 15:15:42 PDT 2019
- * Copyright: Claude Nanjo
+ * Generated or updated on: Thu Jul 11 00:39:54 PDT 2019
+ * Copyright: University of Utah
  * License: Apache 2
 */
 public class OccurrenceChoiceImpl extends N4Choice<Date,Period,Timing,Date> implements OccurrenceChoice {
 
-	private Date dateTime;
-	private Period period;
-	private Timing timing;
-	private Date instant;
 
 	public OccurrenceChoiceImpl(Object choice) {
-	super(choice);
-	}
-
-	public Date getDateTime() {
-		return this.dateTime;
-	}
-
-	public void setDateTime(Date arg) {
-		this.dateTime=arg;
-	}
-
-	public Period getPeriod() {
-		return this.period;
-	}
-
-	public void setPeriod(Period arg) {
-		this.period=arg;
-	}
-
-	public Timing getTiming() {
-		return this.timing;
-	}
-
-	public void setTiming(Timing arg) {
-		this.timing=arg;
-	}
-
-	public Date getInstant() {
-		return this.instant;
-	}
-
-	public void setInstant(Date arg) {
-		this.instant=arg;
+		super(choice);
 	}
 
 	public N4Choice<Date,Period,Timing,Date> buildChoice(Object choice) {
@@ -66,6 +30,54 @@ public class OccurrenceChoiceImpl extends N4Choice<Date,Period,Timing,Date> impl
 		} else {
 			throw new RuntimeException("Invalid type for choice argument " + choice.getClass().getName());
 		}
+	}
+
+	public Date getDateTime() {
+		if(getChoice() instanceof Date) {
+			return (Date) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setDateTime(Date dateTimeArg) {
+		setChoice(dateTimeArg);
+	}
+
+	public Period getPeriod() {
+		if(getChoice() instanceof Period) {
+			return (Period) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setPeriod(Period periodArg) {
+		setChoice(periodArg);
+	}
+
+	public Timing getTiming() {
+		if(getChoice() instanceof Timing) {
+			return (Timing) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setTiming(Timing timingArg) {
+		setChoice(timingArg);
+	}
+
+	public Date getInstant() {
+		if(getChoice() instanceof Date) {
+			return (Date) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setInstant(Date instantArg) {
+		setChoice(instantArg);
 	}
 
 }

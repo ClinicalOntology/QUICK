@@ -10,42 +10,15 @@ import org.reimagineehr.model.quick.api.choice.TimeIntervalChoice;
 /**
  * Author: Claude Nanjo
  * GENERATED CODE - DO NOT EDIT
- * Generated or updated on: Tue Jul 09 15:15:42 PDT 2019
- * Copyright: Claude Nanjo
+ * Generated or updated on: Thu Jul 11 00:39:54 PDT 2019
+ * Copyright: University of Utah
  * License: Apache 2
 */
 public class TimeIntervalChoiceImpl extends N3Choice<Duration,Range,Period> implements TimeIntervalChoice {
 
-	private Duration duration;
-	private Range range;
-	private Period period;
 
 	public TimeIntervalChoiceImpl(Object choice) {
-	super(choice);
-	}
-
-	public Duration getDuration() {
-		return this.duration;
-	}
-
-	public void setDuration(Duration arg) {
-		this.duration=arg;
-	}
-
-	public Range getRange() {
-		return this.range;
-	}
-
-	public void setRange(Range arg) {
-		this.range=arg;
-	}
-
-	public Period getPeriod() {
-		return this.period;
-	}
-
-	public void setPeriod(Period arg) {
-		this.period=arg;
+		super(choice);
 	}
 
 	public N3Choice<Duration,Range,Period> buildChoice(Object choice) {
@@ -57,6 +30,42 @@ public class TimeIntervalChoiceImpl extends N3Choice<Duration,Range,Period> impl
 		} else {
 			throw new RuntimeException("Invalid type for choice argument " + choice.getClass().getName());
 		}
+	}
+
+	public Duration getDuration() {
+		if(getChoice() instanceof Duration) {
+			return (Duration) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setDuration(Duration durationArg) {
+		setChoice(durationArg);
+	}
+
+	public Range getRange() {
+		if(getChoice() instanceof Range) {
+			return (Range) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setRange(Range rangeArg) {
+		setChoice(rangeArg);
+	}
+
+	public Period getPeriod() {
+		if(getChoice() instanceof Period) {
+			return (Period) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setPeriod(Period periodArg) {
+		setChoice(periodArg);
 	}
 
 }

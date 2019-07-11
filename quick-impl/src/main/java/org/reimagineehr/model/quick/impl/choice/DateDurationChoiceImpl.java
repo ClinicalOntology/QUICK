@@ -9,33 +9,15 @@ import org.reimagineehr.model.quick.api.choice.DateDurationChoice;
 /**
  * Author: Claude Nanjo
  * GENERATED CODE - DO NOT EDIT
- * Generated or updated on: Tue Jul 09 15:15:42 PDT 2019
- * Copyright: Claude Nanjo
+ * Generated or updated on: Thu Jul 11 00:39:54 PDT 2019
+ * Copyright: University of Utah
  * License: Apache 2
 */
 public class DateDurationChoiceImpl extends N2Choice<Date,Duration> implements DateDurationChoice {
 
-	private Date date;
-	private Duration duration;
 
 	public DateDurationChoiceImpl(Object choice) {
-	super(choice);
-	}
-
-	public Date getDate() {
-		return this.date;
-	}
-
-	public void setDate(Date arg) {
-		this.date=arg;
-	}
-
-	public Duration getDuration() {
-		return this.duration;
-	}
-
-	public void setDuration(Duration arg) {
-		this.duration=arg;
+		super(choice);
 	}
 
 	public N2Choice<Date,Duration> buildChoice(Object choice) {
@@ -47,6 +29,30 @@ public class DateDurationChoiceImpl extends N2Choice<Date,Duration> implements D
 		} else {
 			throw new RuntimeException("Invalid type for choice argument " + choice.getClass().getName());
 		}
+	}
+
+	public Date getDate() {
+		if(getChoice() instanceof Date) {
+			return (Date) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setDate(Date dateArg) {
+		setChoice(dateArg);
+	}
+
+	public Duration getDuration() {
+		if(getChoice() instanceof Duration) {
+			return (Duration) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setDuration(Duration durationArg) {
+		setChoice(durationArg);
 	}
 
 }

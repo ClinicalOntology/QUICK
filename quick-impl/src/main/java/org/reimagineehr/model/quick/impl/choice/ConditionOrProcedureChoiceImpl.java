@@ -9,33 +9,15 @@ import org.reimagineehr.model.quick.api.choice.ConditionOrProcedureChoice;
 /**
  * Author: Claude Nanjo
  * GENERATED CODE - DO NOT EDIT
- * Generated or updated on: Tue Jul 09 15:15:42 PDT 2019
- * Copyright: Claude Nanjo
+ * Generated or updated on: Thu Jul 11 00:39:54 PDT 2019
+ * Copyright: University of Utah
  * License: Apache 2
 */
 public class ConditionOrProcedureChoiceImpl extends N2Choice<Condition,Procedure> implements ConditionOrProcedureChoice {
 
-	private Condition condition;
-	private Procedure procedure;
 
 	public ConditionOrProcedureChoiceImpl(Object choice) {
-	super(choice);
-	}
-
-	public Condition getCondition() {
-		return this.condition;
-	}
-
-	public void setCondition(Condition arg) {
-		this.condition=arg;
-	}
-
-	public Procedure getProcedure() {
-		return this.procedure;
-	}
-
-	public void setProcedure(Procedure arg) {
-		this.procedure=arg;
+		super(choice);
 	}
 
 	public N2Choice<Condition,Procedure> buildChoice(Object choice) {
@@ -47,6 +29,30 @@ public class ConditionOrProcedureChoiceImpl extends N2Choice<Condition,Procedure
 		} else {
 			throw new RuntimeException("Invalid type for choice argument " + choice.getClass().getName());
 		}
+	}
+
+	public Condition getCondition() {
+		if(getChoice() instanceof Condition) {
+			return (Condition) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setCondition(Condition conditionArg) {
+		setChoice(conditionArg);
+	}
+
+	public Procedure getProcedure() {
+		if(getChoice() instanceof Procedure) {
+			return (Procedure) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setProcedure(Procedure procedureArg) {
+		setChoice(procedureArg);
 	}
 
 }

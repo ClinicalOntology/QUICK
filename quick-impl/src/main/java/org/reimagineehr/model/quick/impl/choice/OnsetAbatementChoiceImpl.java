@@ -12,60 +12,15 @@ import org.reimagineehr.model.quick.api.choice.OnsetAbatementChoice;
 /**
  * Author: Claude Nanjo
  * GENERATED CODE - DO NOT EDIT
- * Generated or updated on: Tue Jul 09 15:15:41 PDT 2019
- * Copyright: Claude Nanjo
+ * Generated or updated on: Thu Jul 11 00:39:54 PDT 2019
+ * Copyright: University of Utah
  * License: Apache 2
 */
 public class OnsetAbatementChoiceImpl extends N5Choice<Age,Range,Period,String,Date> implements OnsetAbatementChoice {
 
-	private Age age;
-	private Range range;
-	private Period period;
-	private String string;
-	private Date dateTime;
 
 	public OnsetAbatementChoiceImpl(Object choice) {
-	super(choice);
-	}
-
-	public Age getAge() {
-		return this.age;
-	}
-
-	public void setAge(Age arg) {
-		this.age=arg;
-	}
-
-	public Range getRange() {
-		return this.range;
-	}
-
-	public void setRange(Range arg) {
-		this.range=arg;
-	}
-
-	public Period getPeriod() {
-		return this.period;
-	}
-
-	public void setPeriod(Period arg) {
-		this.period=arg;
-	}
-
-	public String getString() {
-		return this.string;
-	}
-
-	public void setString(String arg) {
-		this.string=arg;
-	}
-
-	public Date getDateTime() {
-		return this.dateTime;
-	}
-
-	public void setDateTime(Date arg) {
-		this.dateTime=arg;
+		super(choice);
 	}
 
 	public N5Choice<Age,Range,Period,String,Date> buildChoice(Object choice) {
@@ -77,6 +32,66 @@ public class OnsetAbatementChoiceImpl extends N5Choice<Age,Range,Period,String,D
 		} else {
 			throw new RuntimeException("Invalid type for choice argument " + choice.getClass().getName());
 		}
+	}
+
+	public Age getAge() {
+		if(getChoice() instanceof Age) {
+			return (Age) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setAge(Age ageArg) {
+		setChoice(ageArg);
+	}
+
+	public Range getRange() {
+		if(getChoice() instanceof Range) {
+			return (Range) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setRange(Range rangeArg) {
+		setChoice(rangeArg);
+	}
+
+	public Period getPeriod() {
+		if(getChoice() instanceof Period) {
+			return (Period) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setPeriod(Period periodArg) {
+		setChoice(periodArg);
+	}
+
+	public String getString() {
+		if(getChoice() instanceof String) {
+			return (String) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setString(String stringArg) {
+		setChoice(stringArg);
+	}
+
+	public Date getDateTime() {
+		if(getChoice() instanceof Date) {
+			return (Date) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setDateTime(Date dateTimeArg) {
+		setChoice(dateTimeArg);
 	}
 
 }

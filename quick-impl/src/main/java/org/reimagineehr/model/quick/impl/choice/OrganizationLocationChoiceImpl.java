@@ -9,33 +9,15 @@ import org.reimagineehr.model.quick.api.choice.OrganizationLocationChoice;
 /**
  * Author: Claude Nanjo
  * GENERATED CODE - DO NOT EDIT
- * Generated or updated on: Tue Jul 09 15:15:42 PDT 2019
- * Copyright: Claude Nanjo
+ * Generated or updated on: Thu Jul 11 00:39:54 PDT 2019
+ * Copyright: University of Utah
  * License: Apache 2
 */
 public class OrganizationLocationChoiceImpl extends N2Choice<Location,Organization> implements OrganizationLocationChoice {
 
-	private Location location;
-	private Organization organization;
 
 	public OrganizationLocationChoiceImpl(Object choice) {
-	super(choice);
-	}
-
-	public Location getLocation() {
-		return this.location;
-	}
-
-	public void setLocation(Location arg) {
-		this.location=arg;
-	}
-
-	public Organization getOrganization() {
-		return this.organization;
-	}
-
-	public void setOrganization(Organization arg) {
-		this.organization=arg;
+		super(choice);
 	}
 
 	public N2Choice<Location,Organization> buildChoice(Object choice) {
@@ -47,6 +29,30 @@ public class OrganizationLocationChoiceImpl extends N2Choice<Location,Organizati
 		} else {
 			throw new RuntimeException("Invalid type for choice argument " + choice.getClass().getName());
 		}
+	}
+
+	public Location getLocation() {
+		if(getChoice() instanceof Location) {
+			return (Location) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setLocation(Location locationArg) {
+		setChoice(locationArg);
+	}
+
+	public Organization getOrganization() {
+		if(getChoice() instanceof Organization) {
+			return (Organization) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setOrganization(Organization organizationArg) {
+		setChoice(organizationArg);
 	}
 
 }

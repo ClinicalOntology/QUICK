@@ -11,51 +11,15 @@ import org.reimagineehr.model.quick.api.choice.GoalChoice;
 /**
  * Author: Claude Nanjo
  * GENERATED CODE - DO NOT EDIT
- * Generated or updated on: Tue Jul 09 15:15:41 PDT 2019
- * Copyright: Claude Nanjo
+ * Generated or updated on: Thu Jul 11 00:39:54 PDT 2019
+ * Copyright: University of Utah
  * License: Apache 2
 */
 public class GoalChoiceImpl extends N4Choice<Condition,Observation,MedicationStatement,ServiceRequest> implements GoalChoice {
 
-	private Condition condition;
-	private Observation observation;
-	private MedicationStatement medicationStatement;
-	private ServiceRequest serviceRequest;
 
 	public GoalChoiceImpl(Object choice) {
-	super(choice);
-	}
-
-	public Condition getCondition() {
-		return this.condition;
-	}
-
-	public void setCondition(Condition arg) {
-		this.condition=arg;
-	}
-
-	public Observation getObservation() {
-		return this.observation;
-	}
-
-	public void setObservation(Observation arg) {
-		this.observation=arg;
-	}
-
-	public MedicationStatement getMedicationStatement() {
-		return this.medicationStatement;
-	}
-
-	public void setMedicationStatement(MedicationStatement arg) {
-		this.medicationStatement=arg;
-	}
-
-	public ServiceRequest getServiceRequest() {
-		return this.serviceRequest;
-	}
-
-	public void setServiceRequest(ServiceRequest arg) {
-		this.serviceRequest=arg;
+		super(choice);
 	}
 
 	public N4Choice<Condition,Observation,MedicationStatement,ServiceRequest> buildChoice(Object choice) {
@@ -67,6 +31,54 @@ public class GoalChoiceImpl extends N4Choice<Condition,Observation,MedicationSta
 		} else {
 			throw new RuntimeException("Invalid type for choice argument " + choice.getClass().getName());
 		}
+	}
+
+	public Condition getCondition() {
+		if(getChoice() instanceof Condition) {
+			return (Condition) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setCondition(Condition conditionArg) {
+		setChoice(conditionArg);
+	}
+
+	public Observation getObservation() {
+		if(getChoice() instanceof Observation) {
+			return (Observation) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setObservation(Observation observationArg) {
+		setChoice(observationArg);
+	}
+
+	public MedicationStatement getMedicationStatement() {
+		if(getChoice() instanceof MedicationStatement) {
+			return (MedicationStatement) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setMedicationStatement(MedicationStatement medicationStatementArg) {
+		setChoice(medicationStatementArg);
+	}
+
+	public ServiceRequest getServiceRequest() {
+		if(getChoice() instanceof ServiceRequest) {
+			return (ServiceRequest) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setServiceRequest(ServiceRequest serviceRequestArg) {
+		setChoice(serviceRequestArg);
 	}
 
 }

@@ -10,42 +10,15 @@ import org.reimagineehr.model.quick.api.choice.CommunicationPayloadContentChoice
 /**
  * Author: Claude Nanjo
  * GENERATED CODE - DO NOT EDIT
- * Generated or updated on: Tue Jul 09 15:15:41 PDT 2019
- * Copyright: Claude Nanjo
+ * Generated or updated on: Thu Jul 11 00:39:54 PDT 2019
+ * Copyright: University of Utah
  * License: Apache 2
 */
 public class CommunicationPayloadContentChoiceImpl extends N3Choice<String,Attachment,DomainResource> implements CommunicationPayloadContentChoice {
 
-	private String string;
-	private Attachment attachment;
-	private DomainResource reference;
 
 	public CommunicationPayloadContentChoiceImpl(Object choice) {
-	super(choice);
-	}
-
-	public String getString() {
-		return this.string;
-	}
-
-	public void setString(String arg) {
-		this.string=arg;
-	}
-
-	public Attachment getAttachment() {
-		return this.attachment;
-	}
-
-	public void setAttachment(Attachment arg) {
-		this.attachment=arg;
-	}
-
-	public DomainResource getReference() {
-		return this.reference;
-	}
-
-	public void setReference(DomainResource arg) {
-		this.reference=arg;
+		super(choice);
 	}
 
 	public N3Choice<String,Attachment,DomainResource> buildChoice(Object choice) {
@@ -57,6 +30,42 @@ public class CommunicationPayloadContentChoiceImpl extends N3Choice<String,Attac
 		} else {
 			throw new RuntimeException("Invalid type for choice argument " + choice.getClass().getName());
 		}
+	}
+
+	public String getString() {
+		if(getChoice() instanceof String) {
+			return (String) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setString(String stringArg) {
+		setChoice(stringArg);
+	}
+
+	public Attachment getAttachment() {
+		if(getChoice() instanceof Attachment) {
+			return (Attachment) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setAttachment(Attachment attachmentArg) {
+		setChoice(attachmentArg);
+	}
+
+	public DomainResource getReference() {
+		if(getChoice() instanceof DomainResource) {
+			return (DomainResource) getChoice();
+		} else {
+			return null;
+		}
+	}
+
+	public void setReference(DomainResource referenceArg) {
+		setChoice(referenceArg);
 	}
 
 }
