@@ -10,7 +10,7 @@ import org.reimagineehr.model.quick.api.datatype.CodeableConcept;
 /**
  * Author: Claude Nanjo
  * GENERATED CODE - DO NOT EDIT
- * Generated or updated on: Thu Jul 11 00:39:54 PDT 2019
+ * Generated or updated on: Thu Jul 11 13:57:04 PDT 2019
  * Copyright: University of Utah
  * License: Apache 2
 */
@@ -90,7 +90,13 @@ public class DosageInstructionWrapper implements DosageInstruction {
 	}
 
 	public void addDoseAndRate(DoseAndRate arg) {
-		throw new RuntimeException("Not implemented yet");
+		if(getDoseAndRate() != null) {
+			getDoseAndRate().add(arg);
+		} else {
+			List<DoseAndRate> items = new java.util.ArrayList<>();
+			setDoseAndRate(items);
+			items.add(arg);
+		}
 	}
 
 	public Timing getTiming() {
