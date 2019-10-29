@@ -12,7 +12,7 @@
     <artifactId>quick-stu3</artifactId>
 
     <properties>
-        <hapi.fhir.version>3.7.0</hapi.fhir.version>
+        <hapi.fhir.version>4.0.3</hapi.fhir.version>
         <fhir-lm.version>1.0-SNAPSHOT</fhir-lm.version>
     </properties>
 
