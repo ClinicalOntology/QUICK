@@ -12,6 +12,7 @@
         <module>quick-impl</module>
         <module>quick-stu3</module>
         <module>quick-common</module>
+        <module>quick-r4</module>
     </modules>
 
     <packaging>pom</packaging>
